@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://sokodistrict.com.thabo/model"
+        xmlns:tns="http://sokodistrict.com.thabo/model"
+        elementFormDefault="qualified">
+
+    <element name="EmployeeDetailsQueryModel" type="tns:EmployeeDetailsQueryModel" />
+    <complexType name="EmployeeDetailsQueryModel">
+        <sequence>
+            <element name="id" type="long"></element>
+            <element name="name" type="string"></element>
+            <element name="lastName" type="string"></element>
+            <element name="employeeDetails" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="question" type="string" />
+                        <element name="answer" type="string" />
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="EmployeeLeaveQueryModel" type="tns:EmployeeLeaveQueryModel" />
+    <complexType name="EmployeeLeaveQueryModel">
+        <sequence>
+            <element name="id" type="long"></element>
+            <element name="startDate" type="string"></element>
+            <element name="endDate" type="string"></element>
+        </sequence>
+    </complexType>
+
+    <element name="LeaveDetailsQueryModel" type="tns:LeaveDetailsQueryModel" />
+    <complexType name="LeaveDetailsQueryModel">
+        <sequence>
+            <element name="id" type="long"></element>
+            <element name="leaveType" type="string"></element>
+        </sequence>
+    </complexType>
+
+    <element name="LeaveBalanceQueryModel" type="tns:LeaveBalanceQueryModel" />
+    <complexType name="LeaveBalanceQueryModel">
+        <sequence>
+            <element name="id" type="long"></element>
+            <element name="bonus" type="integer"></element>
+            <element name="balance" type="integer"></element>
+        </sequence>
+    </complexType>
+
+    <element name="LeaveTypeQueryModel" type="tns:LeaveTypeQueryModel" />
+    <complexType name="LeaveTypeQueryModel">
+        <sequence>
+            <element name="id" type="long"></element>
+            <element name="type" type="string"></element>
+        </sequence>
+    </complexType>
+    
+</schema>    
